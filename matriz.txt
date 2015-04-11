@@ -1,0 +1,13 @@
+4 abc
+1 1 1
+2 1 -1
+-1 3 2
+-1 -1 -1
+0
+1 3
+5
+abab
+abbc
+abaa
+acb
+baac

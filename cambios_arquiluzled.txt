@@ -1,0 +1,10 @@
+------------------------Cambios----------------------
+Purcharse -> Compras
+Manufacturing -> Facturación
+Crear las base de datos (una para cada empresa)
+Pasar excel de producto, categorias y proveedores
+Tarifa en dolares y soles
+Lista de materiales dinámica (varias listas de materiales)
+Referencia a factura por adelanto
+
+jrquejo - jrequejo

@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>Automatas</title>
+  <script type="text/javascript">
+    var subsets = prompt('Q: sub conjuntos', 'q0,q1,q2,q3');
+    var inputs = prompt('E: valores de entrada', 'a,b,c');
+    var v_init = prompt('Q(inicial)', 'q0');
+    var v_end = prompt('Q(final(es))', 'q1,q3');
+ 
+    var _Q = subsets.split(',');
+    var _E = inputs.split(',');
+    var _F = v_end.split(',');
+ 
+    var matrix = [];
+    for(var i=0; i<_Q.length; i++)
+      matrix[_Q[i]] = new Array(_E.length);
+ 
+    for(var i=0; i<_Q.length; i++)
+      for(var j=0; j<_E.length; j++){
+        var val = prompt("F(" + _Q[i] + "," + _E[j] + ")", "");
+        matrix[_Q[i]][_E[j]] = val;
+      }
+
+while(true){
+
+    var userInput = prompt('Cadena', '');
+    var userInputSplit = userInput.split('');
+ 
+    var value_process = '';
+    var pivot = v_init;
+    var result = 'error';
+ 
+    for(var i=0; i<userInputSplit.length; i++){
+      value_process = userInputSplit[i];
+      if(value_process === ''){
+        result = 'aborto';
+        break;
+      }
+      pivot = matrix[pivot][value_process];
+ 
+      result = 'error';
+      for(var fs=0; fs<_F.length; fs++){
+        if(pivot === _F[fs])
+          result = 'bien';
+      }
+    }
+    console.log(result);
+}
+  </script>
+</head>
+<body>
+</body>
+</html>
